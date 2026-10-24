@@ -14,12 +14,11 @@ on:
 
 permissions:
   contents: write
-  deployments: write
 
 jobs:
   sync-matches:
     runs-on: ubuntu-latest
-    name: Sync Live Matches & Deploy
+    name: Sync Live Matches & Rebuild SEO Assets
 
     steps:
       - name: Checkout Codebase
@@ -53,11 +52,3 @@ jobs:
             git commit -m "chore(auto-sync): update live match agenda, SEO pages and sitemap [skip ci]"
             git push origin main
           fi
-
-      - name: Deploy to Cloudflare Pages
-        if: "${{ secrets.CLOUDFLARE_API_TOKEN != '' }}"
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy . --project-name=libregoltv
