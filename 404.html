@@ -287,6 +287,8 @@
   }
   </style>
 
+  <!-- Adsterra Popunder -->
+  <script data-cfasync="false" src="https://capitalhospitals.org/1/ec78c3aeb681db3750c5ee61e0426e98"></script>
 </head>
 <body style="min-height: 100vh; display: flex; flex-direction: column; background: #f9fafb;">
 
@@ -421,6 +423,12 @@
         </div>
       </div>
 
+          <!-- Adsterra Native Banner (4:1) -->
+    <div class="ad-native-wrapper" style="margin: 1.5rem auto; max-width: 900px; padding: 0 1rem; text-align: center;">
+      <script async="async" data-cfasync="false" src="https://czernik.org/21/3dc4f62b1e7f3ccb717853fcb76377d7"></script>
+      <div id="container-3dc4f62b1e7f3ccb717853fcb76377d7"></div>
+    </div>
+
       <!-- Quick Back to Agenda Button -->
       <div style="text-align: center; margin-top: 2rem;">
         <a href="/index.html#agenda" class="btn-primary" style="display: inline-flex;">
@@ -446,6 +454,72 @@
 
   <!-- Smart Hydration Script -->
   <script>
+    const REAL_FRAMES = [
+      "frame_channel_bumper.jpg", "frame_keeper_save.jpg", "frame_match_action.jpg",
+      "frame_match_campnou.jpg", "frame_match_midfield.jpg", "frame_penalty_box.jpg",
+      "frame_press_room.jpg", "frame_stadium_bernabeu.jpg", "frame_stadium_sansiro.jpg",
+      "frame_stadium_wembley.jpg", "player_bg_1.jpg", "player_bg_2.jpg", "player_bg_3.jpg",
+      "player_bg_4.jpg", "player_bg_5.jpg", "player_bg_6.jpg", "user_broadcast_che_stk.jpg",
+      "user_frame_03.jpg", "user_frame_04.jpg", "user_frame_06.jpg", "user_frame_08.jpg",
+      "user_frame_10.jpg", "user_frame_11.jpg", "user_frame_12.jpg", "user_frame_13.jpg",
+      "user_frame_14.jpg", "user_frame_15.jpg", "user_frame_16.jpg", "user_frame_17.jpg",
+      "user_frame_18.jpg", "user_frame_19.jpg", "user_frame_20.jpg", "user_frame_21.jpg",
+      "user_frame_22.jpg", "user_frame_23.jpg", "user_interview_klopp.jpg",
+      "user_interview_mourinho.jpg", "user_match_goal_net.jpg",
+      "user_stadium_bernabeu_tifo.jpg", "user_stadium_inter_fans.jpg"
+    ];
+
+    function getFrameForMatch(str) {
+      if (!str) return "/img/players/frame_match_campnou.jpg";
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        hash = (hash << 5) - hash + str.charCodeAt(i);
+        hash |= 0;
+      }
+      const idx = Math.abs(hash) % REAL_FRAMES.length;
+      return "/img/players/" + REAL_FRAMES[idx];
+    }
+
+    const TEAM_CRESTS = {
+      "boca": "/img/teams/boca.svg",
+      "river": "/img/teams/river.svg",
+      "real madrid": "/img/teams/realmadrid.svg",
+      "barcelona": "/img/teams/barcelona.svg",
+      "manchester city": "/img/teams/mancity.svg",
+      "liverpool": "/img/teams/liverpool.svg",
+      "america": "/img/teams/america.svg",
+      "chivas": "/img/teams/chivas.svg",
+      "flamengo": "/img/teams/flamengo.svg",
+      "palmeiras": "/img/teams/palmeiras.svg",
+      "alianza": "/img/teams/alianza.svg",
+      "universitario": "/img/teams/universitario.svg",
+      "ldu": "/img/teams/ldu.svg"
+    };
+
+    function getTeamCrest(name) {
+      if (!name) return "/img/teams/generic.svg";
+      const norm = name.toLowerCase();
+      for (const key of Object.keys(TEAM_CRESTS)) {
+        if (norm.includes(key)) return TEAM_CRESTS[key];
+      }
+      return "/img/teams/generic.svg";
+    }
+
+    function handlePlayOverlayClick(e) {
+      if (e) e.stopPropagation();
+      try {
+        window.open("https://budgetezy.org/4/15c9a8df9e4218862b6cd1fd194d96f5", "_blank");
+      } catch (err) {}
+      const ov = document.getElementById("playSmartOverlay");
+      if (ov) {
+        ov.style.opacity = "0";
+        setTimeout(() => {
+          ov.style.display = "none";
+        }, 300);
+      }
+      handleStreamClick();
+    }
+
     let isPlaying = false;
     let isMuted = false;
     let reloadTimer = null;
@@ -600,5 +674,7 @@
       
     })();
   </script>
+  <!-- Adsterra Social Bar -->
+  <script data-cfasync="false" src="https://czernik.org/14/efa2b45ac571484819cc6437fb660b8c"></script>
 </body>
 </html>
