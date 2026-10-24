@@ -210,3 +210,5 @@
     padding: 2px 6px;
   }
 }
+
+#libregol-cookie-banner, .cookie-consent-bar { display: none !important; }
