@@ -572,7 +572,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return a.utcKickoff.localeCompare(b.utcKickoff);
     });
 
-    function resolveChannelHref(ch) {
+    function resolveChannelHref(ch, match = null) {
       if (typeof ch === "object" && ch !== null) {
         ch = ch.name || "";
       }
@@ -583,25 +583,34 @@ document.addEventListener("DOMContentLoaded", () => {
       const isFile = (typeof window !== "undefined" && window.location.protocol === "file:");
       const ext = isFile ? ".html" : "";
       const prefix = isFile ? "canales/" : "/canales/";
-      if (norm.includes("espn premium")) return prefix + "espn-premium" + ext;
-      if (norm.includes("espn 2") || norm.includes("espn2")) return prefix + "espn-2" + ext;
-      if (norm.includes("espn 3") || norm.includes("espn3")) return prefix + "espn-3" + ext;
-      if (norm.includes("espn 4") || norm.includes("espn4")) return prefix + "espn-4" + ext;
-      if (norm.includes("espn")) return prefix + "espn-1" + ext;
-      if (norm.includes("tyc")) return prefix + "tyc-sports" + ext;
-      if (norm.includes("fox")) return prefix + "fox-sports-1" + ext;
-      if (norm.includes("tnt")) return prefix + "tnt-sports" + ext;
-      if (norm.includes("dsports 2") || norm.includes("directv 2")) return prefix + "directv-sports-2" + ext;
-      if (norm.includes("dsports +") || norm.includes("plus")) return prefix + "directv-sports-plus" + ext;
-      if (norm.includes("dsports") || norm.includes("directv")) return prefix + "directv-sports" + ext;
-      if (norm.includes("win")) return prefix + "win-sports" + ext;
-      if (norm.includes("liga 1")) return prefix + "liga-1-max" + ext;
-      if (norm.includes("gol per") || norm.includes("golperu")) return prefix + "gol-peru" + ext;
-      if (norm.includes("telemundo")) return prefix + "telemundo" + ext;
-      if (norm.includes("tudn") || norm.includes("vix") || norm.includes("canal 5")) return prefix + "tudn" + ext;
-      if (norm.includes("tigo")) return prefix + "tigo-sports" + ext;
-      if (norm.includes("estrellas")) return prefix + "las-estrellas" + ext;
-      return prefix + "espn-1" + ext;
+      let base = prefix + "espn-1" + ext;
+      if (norm.includes("espn premium")) base = prefix + "espn-premium" + ext;
+      else if (norm.includes("espn 2") || norm.includes("espn2")) base = prefix + "espn-2" + ext;
+      else if (norm.includes("espn 3") || norm.includes("espn3")) base = prefix + "espn-3" + ext;
+      else if (norm.includes("espn 4") || norm.includes("espn4")) base = prefix + "espn-4" + ext;
+      else if (norm.includes("espn")) base = prefix + "espn-1" + ext;
+      else if (norm.includes("tyc")) base = prefix + "tyc-sports" + ext;
+      else if (norm.includes("fox")) base = prefix + "fox-sports-1" + ext;
+      else if (norm.includes("tnt")) base = prefix + "tnt-sports" + ext;
+      else if (norm.includes("dsports 2") || norm.includes("directv 2")) base = prefix + "directv-sports-2" + ext;
+      else if (norm.includes("dsports +") || norm.includes("plus")) base = prefix + "directv-sports-plus" + ext;
+      else if (norm.includes("dsports") || norm.includes("directv")) base = prefix + "directv-sports" + ext;
+      else if (norm.includes("win")) base = prefix + "win-sports" + ext;
+      else if (norm.includes("liga 1")) base = prefix + "liga-1-max" + ext;
+      else if (norm.includes("gol per") || norm.includes("golperu")) base = prefix + "gol-peru" + ext;
+      else if (norm.includes("telemundo")) base = prefix + "telemundo" + ext;
+      else if (norm.includes("tudn") || norm.includes("vix") || norm.includes("canal 5")) base = prefix + "tudn" + ext;
+      else if (norm.includes("tigo")) base = prefix + "tigo-sports" + ext;
+      else if (norm.includes("estrellas")) base = prefix + "las-estrellas" + ext;
+
+      if (match && match.homeTeam && match.awayTeam) {
+        const params = new URLSearchParams();
+        params.set("home", match.homeTeam);
+        params.set("away", match.awayTeam);
+        if (match.tournament) params.set("league", match.tournament);
+        return base + "?" + params.toString();
+      }
+      return base;
     }
 
     // --- VIEW A: MARCADORES / FLASH SCORE SCOREBOARD ---

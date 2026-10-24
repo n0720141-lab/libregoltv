@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="100" height="120">
+  <!-- LDU Quito Crest -->
+  <defs>
+    <clipPath id="lduClip">
+      <path d="M 12 12 L 88 12 C 88 65 72 98 50 115 C 28 98 12 65 12 12 Z"/>
+    </clipPath>
+  </defs>
+  <!-- White Shield with Red and Blue Bands -->
+  <g clip-path="url(#lduClip)">
+    <rect x="0" y="0" width="100" height="120" fill="#ffffff"/>
+    <polygon points="0,0 100,0 100,30 0,30" fill="#002b66"/>
+    <text x="50" y="24" fill="#ffffff" font-family="Arial, sans-serif" font-weight="900" font-size="12" letter-spacing="1" text-anchor="middle">L.D.U.</text>
+    <!-- Big Red U -->
+    <text x="50" y="85" fill="#c8102e" font-family="'Times New Roman', serif" font-weight="900" font-size="52" text-anchor="middle">U</text>
+    <!-- Gold Stars -->
+    <polygon points="50,95 52,99 56,99 53,101 54,105 50,103 46,105 47,101 44,99 48,99" fill="#ffd100"/>
+  </g>
+  <path d="M 12 12 L 88 12 C 88 65 72 98 50 115 C 28 98 12 65 12 12 Z" fill="none" stroke="#c8102e" stroke-width="4"/>
+</svg>

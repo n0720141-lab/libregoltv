@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="100" height="120">
+  <!-- Alianza Lima Crest -->
+  <defs>
+    <clipPath id="alClip">
+      <path d="M 12 12 L 88 12 C 88 65 72 98 50 115 C 28 98 12 65 12 12 Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#alClip)">
+    <rect x="0" y="0" width="100" height="120" fill="#ffffff"/>
+    <rect x="22" y="0" width="16" height="120" fill="#001d4a"/>
+    <rect x="62" y="0" width="16" height="120" fill="#001d4a"/>
+    <!-- Top Navy Header with 3 Stars and Cross -->
+    <rect x="0" y="0" width="100" height="36" fill="#001d4a"/>
+    <circle cx="30" cy="18" r="3" fill="#ffd100"/>
+    <circle cx="50" cy="18" r="4" fill="#ffd100"/>
+    <circle cx="70" cy="18" r="3" fill="#ffd100"/>
+  </g>
+  <path d="M 12 12 L 88 12 C 88 65 72 98 50 115 C 28 98 12 65 12 12 Z" fill="none" stroke="#001d4a" stroke-width="4"/>
+</svg>

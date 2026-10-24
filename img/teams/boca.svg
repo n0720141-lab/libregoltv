@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="100" height="120">
+  <!-- Boca Juniors Crest -->
+  <defs>
+    <clipPath id="shieldClip">
+      <path d="M 10 10 L 90 10 C 90 60 75 95 50 115 C 25 95 10 60 10 10 Z"/>
+    </clipPath>
+  </defs>
+  <!-- Base Shield -->
+  <path d="M 10 10 L 90 10 C 90 60 75 95 50 115 C 25 95 10 60 10 10 Z" fill="#002b66" stroke="#f6b21b" stroke-width="4"/>
+  <!-- Gold Middle Stripe -->
+  <g clip-path="url(#shieldClip)">
+    <rect x="0" y="42" width="100" height="36" fill="#f6b21b"/>
+    <!-- Yellow Stars pattern -->
+    <circle cx="50" cy="24" r="3" fill="#f6b21b"/>
+    <circle cx="34" cy="28" r="3" fill="#f6b21b"/>
+    <circle cx="66" cy="28" r="3" fill="#f6b21b"/>
+    <circle cx="24" cy="36" r="3" fill="#f6b21b"/>
+    <circle cx="76" cy="36" r="3" fill="#f6b21b"/>
+    <!-- Letters CABJ -->
+    <text x="50" y="68" fill="#002b66" font-family="Arial, sans-serif" font-weight="900" font-size="20" letter-spacing="1" text-anchor="middle">CABJ</text>
+  </g>
+</svg>

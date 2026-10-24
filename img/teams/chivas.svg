@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="100" height="120">
+  <!-- Chivas Guadalajara Crest -->
+  <defs>
+    <clipPath id="chivasClip">
+      <path d="M 12 12 L 88 12 C 88 65 72 98 50 115 C 28 98 12 65 12 12 Z"/>
+    </clipPath>
+  </defs>
+  <!-- Shield with Red and White Stripes -->
+  <g clip-path="url(#chivasClip)">
+    <rect x="0" y="0" width="100" height="120" fill="#ffffff"/>
+    <rect x="18" y="0" width="14" height="120" fill="#c8102e"/>
+    <rect x="46" y="0" width="14" height="120" fill="#c8102e"/>
+    <rect x="74" y="0" width="14" height="120" fill="#c8102e"/>
+    <!-- Top Navy Header -->
+    <rect x="0" y="0" width="100" height="38" fill="#002b66"/>
+    <!-- Central Crest -->
+    <circle cx="50" cy="58" r="16" fill="#ffd100" stroke="#002b66" stroke-width="2"/>
+    <text x="50" y="26" fill="#ffffff" font-family="Arial, sans-serif" font-weight="900" font-size="11" letter-spacing="1" text-anchor="middle">CHIVAS</text>
+  </g>
+  <path d="M 12 12 L 88 12 C 88 65 72 98 50 115 C 28 98 12 65 12 12 Z" fill="none" stroke="#002b66" stroke-width="4"/>
+</svg>
