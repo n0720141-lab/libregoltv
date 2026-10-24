@@ -1,0 +1,37 @@
+﻿# Cloudflare Pages / CDN Edge Headers Configuration
+# Optimized for 95+ PageSpeed & Real-time Live Score Updates
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Aggressive Immutable Caching for Static Assets (1 Year)
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Freshness Rules for HTML Pages (Ensures live sports updates are never stale)
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/partidos/*.html
+  Cache-Control: public, max-age=120, must-revalidate
+
+/canales/*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Crawlers
+/sitemap.xml
+  Cache-Control: public, max-age=3600, must-revalidate
+  Content-Type: application/xml; charset=utf-8
+
+/robots.txt
+  Cache-Control: public, max-age=86400, must-revalidate
+  Content-Type: text/plain; charset=utf-8

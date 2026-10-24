@@ -1,0 +1,27 @@
+﻿# ==============================================================================
+# LibreGol TV — Production Robots.txt Crawler Directives
+# Optimized for Googlebot, Search Indexing & Mobile Rendering
+# ==============================================================================
+
+User-agent: *
+Allow: /
+Allow: /css/
+Allow: /js/
+Allow: /img/
+
+# Specific Search Crawlers
+User-agent: Googlebot
+Allow: /
+Allow: /css/
+Allow: /js/
+Allow: /img/
+
+User-agent: Googlebot-Image
+Allow: /img/
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap & Host Specification
+Sitemap: https://libregoltv.online/sitemap.xml
+Host: https://libregoltv.online

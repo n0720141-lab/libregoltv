@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSports 2 en vivo online - LibreGol TV</title>
+  <meta name="description" content="Mira DSports 2 en vivo online en HD. Guía oficial de programación, torneos y cómo sintonizar la señal legal sin interrupciones.">
+  <meta name="keywords" content="dsports 2 en vivo online, ver dsports 2 online, dsports 2 futbol libre, canales en vivo">
+  <link rel="canonical" href="https://libregoltv.online/canales/directv-sports-2">
+    <!-- Performance & Preconnect Hints -->
+  <link rel="preconnect" href="https://a.espncdn.com" crossorigin>
+  <link rel="dns-prefetch" href="https://a.espncdn.com">
+    <!-- Favicon Suite (Google Search & Multi-Device Optimized) -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="../img/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../img/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+  <link rel="stylesheet" href="../css/main.min.css?v=5.0">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://libregoltv.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Canales",
+        "item": "https://libregoltv.online/canales/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "DSports 2",
+        "item": "https://libregoltv.online/canales/directv-sports-2.html"
+      }
+    ]
+  }
+  </script>
+  <!-- BroadcastService Schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BroadcastService",
+  "name": "DSports 2",
+  "broadcastDisplayName": "DSports 2",
+  "broadcaster": {
+    "@type": "Organization",
+    "name": "DirecTV Latin America"
+  },
+  "inLanguage": "es",
+  "genre": "Sports",
+  "url": "https://libregoltv.online/canales/directv-sports-2.html"
+}
+  </script>
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column; background: #f9fafb;">
+
+  <!-- Header -->
+  <header style="background: white; border-bottom: 1px solid #e5e7eb; padding: 0.75rem 1.5rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.04);">
+    <a href="/" class="title-header" style="display: flex; align-items: center; gap: 0.35rem; text-decoration: none; font-weight: 800; font-size: 1.25rem; color: #111827;">
+      <span class="logo-ball" style="font-size: 1.35rem; line-height: 1; vertical-align: middle; margin-right: 4px;">⚽</span>
+      <span>LibreGol<span style="color:#16a34a;">TV</span></span>
+    </a>
+    <a href="/canales/index" style="color: #4b5563; font-weight: 600; font-size: 0.9rem; text-decoration: none; display: flex; align-items: center; gap: 0.35rem;">
+      <span>←</span> Directorio de Canales
+    </a>
+  </header>
+
+  <main class="main-frame" style="max-width: 900px; margin: 1.25rem auto 3rem auto; padding: 0 1rem; width: 100%; box-sizing: border-box;">
+    <!-- Channel Title -->
+    <h1 class="title" style="font-size: 1.5rem; font-weight: 800; color: #111827; text-align: center; margin-bottom: 0.35rem;">
+      DSports 2 en vivo online
+    </h1>
+    <p style="text-align: center; color: #64748b; font-size: 0.9rem; margin-top: 0; margin-bottom: 1.25rem;">
+      Región: Sudamérica 🌎 • Señal Deportiva Oficial
+    </p>
+
+    <!-- Authentic Streaming Video Player Container (Conectando... -> Buffering Player with Controls & Fuentes) -->
+    <div class="stream-player-wrapper" id="streamPlayerWrapper">
+      <div class="video-display-frame" id="videoDisplayFrame" onclick="handleStreamClick()">
+        
+        <!-- State 1: Conectando... Screen (Matching User Screenshot 1) -->
+        <div class="screen-connecting" id="screenConnecting">
+          <div class="connecting-content">
+            <h3 class="connecting-title">Conectando...</h3>
+            <p class="connecting-desc">Cargando la fuente seleccionada.</p>
+          </div>
+        </div>
+
+        <!-- State 2: Video Player with Rotating Buffer & Native Controls (Matching User Screenshot 2) -->
+        <div class="screen-playing" id="screenPlaying" style="display: none;">
+          <!-- Central Rotating Buffer Spinner -->
+          <div class="player-buffer-center">
+            <div class="buffer-arc-spinner"></div>
+          </div>
+
+          <!-- HTML5 Style Controls Overlay -->
+          <div class="player-controls-overlay" onclick="event.stopPropagation()">
+            <div class="controls-timeline-track">
+              <div class="controls-buffer-bar"></div>
+              <div class="controls-playhead-dot"></div>
+            </div>
+            <div class="controls-buttons-bar">
+              <div class="controls-left">
+                <button type="button" class="btn-ctrl" id="btnPlayPause" onclick="togglePlayPause()" title="Pausar / Reproducir">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                </button>
+                <span class="ctrl-time" id="ctrlTime">0:00</span>
+              </div>
+              <div class="controls-right">
+                <button type="button" class="btn-ctrl" id="btnVolume" onclick="toggleMute()" title="Silenciar / Sonido">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                </button>
+                <button type="button" class="btn-ctrl" id="btnFullscreen" onclick="toggleFullscreen()" title="Pantalla completa">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                </button>
+                <button type="button" class="btn-ctrl" title="Opciones">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Under-Player Status & Reload Bar (Screenshot 2) -->
+      <div class="stream-under-bar">
+        <div class="stream-status-left">
+          <span class="stream-status-dot"></span>
+          <span class="stream-status-text" id="streamStatusText">Fuente 1 DSports 2 HD · conectado</span>
+        </div>
+        <button type="button" class="btn-stream-reload" id="btnStreamReload" onclick="triggerReload()" title="Recargar señal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+          </svg>
+          <span>Recargar</span>
+        </button>
+      </div>
+
+      <!-- Source Switcher Pills (Screenshot 2) -->
+      <div class="stream-sources-row">
+        <button type="button" class="source-pill-btn" data-source-id="auto" onclick="selectSource('auto', 'Automático')">
+          Automático
+        </button>
+        <button type="button" class="source-pill-btn active" data-source-id="f1" onclick="selectSource('f1', 'Fuente 1 DSports 2 HD')">
+          FUENTE 1 DSports 2 HD
+        </button>
+        <button type="button" class="source-pill-btn" data-source-id="f2" onclick="selectSource('f2', 'Fuente 2 DGO Señal 2')">
+          FUENTE 2 DGO Señal 2
+        </button>
+        <button type="button" class="source-pill-btn" data-source-id="f3" onclick="selectSource('f3', 'Fuente 3 DSports Alternativo')">
+          FUENTE 3 DSports Alternativo
+        </button>
+      </div>
+    </div>
+
+    <!-- Informative Channel Content (AdSense Safe & SEO Pillar) -->
+    <article class="editorial-article">
+      <h2>DSports 2 en Vivo (Directv Sports 2): Señal de Cobertura Simultánea</h2>
+      <p>
+        La señal de directv sports 2 (DSports 2) está diseñada para emitir partidos simultáneos de torneos continentales (Copa Sudamericana, Copa del Rey, Mundial de la FIFA y baloncesto internacional), complementando la transmisión principal de DSports a través de DirecTV y la plataforma de streaming DGO.
+      </p>
+    </article>
+
+    <!-- Other Sports Channels Directory -->
+    <div style="margin: 2rem 0 1.5rem;">
+      <h2 style="font-size: 1.15rem; font-weight: 700; color: #1f2937; text-align: center; margin-bottom: 1rem;">
+        Más Canales Deportivos en Vivo
+      </h2>
+      <div class="cards-container">
+        
+        <div class="card">
+          <div class="card-image">
+            <img src="../img/canales/espn.webp" alt="ESPN 1 en vivo" loading="lazy" width="260" height="150">
+          </div>
+          <div class="card-content">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">ESPN 1</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 0.6rem;">Sudamérica / Global 🌎</p>
+            <a href="/espn-1" class="btn-watch" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Ver Canal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="../img/canales/espn_2.webp" alt="ESPN 2 en vivo" loading="lazy" width="260" height="150">
+          </div>
+          <div class="card-content">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">ESPN 2</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 0.6rem;">Sudamérica / Global 🌎</p>
+            <a href="/espn-2" class="btn-watch" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Ver Canal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="../img/canales/espn_premium.webp" alt="ESPN Premium en vivo" loading="lazy" width="260" height="150">
+          </div>
+          <div class="card-content">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">ESPN Premium</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 0.6rem;">Argentina 🇦🇷</p>
+            <a href="/espn-premium" class="btn-watch" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Ver Canal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="../img/canales/fox_sports_1.webp" alt="Fox Sports 1 en vivo" loading="lazy" width="260" height="150">
+          </div>
+          <div class="card-content">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">Fox Sports 1</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 0.6rem;">México / Argentina 🇲🇽 🇦🇷</p>
+            <a href="/fox-sports-1" class="btn-watch" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Ver Canal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="../img/canales/tnt_sports.webp" alt="TNT Sports en vivo" loading="lazy" width="260" height="150">
+          </div>
+          <div class="card-content">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">TNT Sports</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 0.6rem;">Argentina 🇦🇷</p>
+            <a href="/tnt-sports" class="btn-watch" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Ver Canal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="../img/canales/win_sports.webp" alt="Win Sports+ en vivo" loading="lazy" width="260" height="150">
+          </div>
+          <div class="card-content">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">Win Sports+</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 0.6rem;">Colombia 🇨🇴</p>
+            <a href="/win-sports" class="btn-watch" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Ver Canal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="../img/canales/liga_1_max.webp" alt="Liga 1 MAX en vivo" loading="lazy" width="260" height="150">
+          </div>
+          <div class="card-content">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">Liga 1 MAX</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 0.6rem;">Perú 🇵🇪</p>
+            <a href="/liga-1-max" class="btn-watch" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Ver Canal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="../img/canales/tyc_sports.webp" alt="TyC Sports en vivo" loading="lazy" width="260" height="150">
+          </div>
+          <div class="card-content">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">TyC Sports</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 0.6rem;">Argentina 🇦🇷</p>
+            <a href="/tyc-sports" class="btn-watch" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Ver Canal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="../img/canales/dsports.webp" alt="DSports en vivo" loading="lazy" width="260" height="150">
+          </div>
+          <div class="card-content">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">DSports</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 0.6rem;">Sudamérica 🌎</p>
+            <a href="/directv-sports" class="btn-watch" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Ver Canal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="../img/canales/dsports_plus.webp" alt="DSports Plus en vivo" loading="lazy" width="260" height="150">
+          </div>
+          <div class="card-content">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">DSports Plus</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 0.6rem;">Sudamérica 🌎</p>
+            <a href="/directv-sports-plus" class="btn-watch" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Ver Canal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="../img/canales/vix_plus.webp" alt="Telemundo en vivo" loading="lazy" width="260" height="150">
+          </div>
+          <div class="card-content">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">Telemundo</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 0.6rem;">EE.UU. & Global 🇺🇸</p>
+            <a href="/telemundo" class="btn-watch" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Ver Canal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="../img/canales/goltv.webp" alt="TUDN en vivo" loading="lazy" width="260" height="150">
+          </div>
+          <div class="card-content">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">TUDN</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 0.6rem;">México & USA 🇲🇽 🇺🇸</p>
+            <a href="/tudn" class="btn-watch" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Ver Canal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="../img/canales/star_plus.webp" alt="Tigo Sports en vivo" loading="lazy" width="260" height="150">
+          </div>
+          <div class="card-content">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">Tigo Sports</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 0.6rem;">Bolivia & Centroamérica 🇧🇴 🇵🇾</p>
+            <a href="/tigo-sports" class="btn-watch" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Ver Canal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="../img/canales/movistar_plus.webp" alt="Las Estrellas en vivo" loading="lazy" width="260" height="150">
+          </div>
+          <div class="card-content">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">Las Estrellas</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 0.6rem;">México 🇲🇽</p>
+            <a href="/las-estrellas" class="btn-watch" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Ver Canal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="../img/canales/dazn.webp" alt="GolPerú en vivo" loading="lazy" width="260" height="150">
+          </div>
+          <div class="card-content">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">GolPerú</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 0.6rem;">Perú 🇵🇪</p>
+            <a href="/gol-peru" class="btn-watch" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Ver Canal</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  
+    <!-- Internal Linking Silo: Canales Deportivos Relacionados y Navegación Oficial -->
+    <section class="channel-silo-mesh" style="margin-top: 2.5rem; background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+        <h2 style="font-size: 1.15rem; font-weight: 800; color: #0f172a; margin: 0;">
+          Canales Deportivos Relacionados y Señales Oficiales
+        </h2>
+        <a href="/" style="font-size: 0.825rem; font-weight: 700; color: #16a34a; text-decoration: none;">Ver Directorio Completo →</a>
+      </div>
+      <p style="font-size: 0.9rem; color: #64748b; margin-top: 0; margin-bottom: 1.25rem;">
+        Explora la programación deportiva de nuestras señales hermanas y consulta la agenda de transmisiones oficiales para hoy.
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.75rem;">
+        
+          <a href="/espn-1" style="display: flex; align-items: center; gap: 0.75rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.65rem 0.85rem; text-decoration: none; color: #1e293b; transition: all 0.2s ease;">
+            <img src="../img/canales/espn.webp" alt="ESPN 1" width="28" height="28" style="object-fit: contain; border-radius: 4px;" loading="lazy">
+            <span style="font-weight: 700; font-size: 0.875rem;">ESPN 1</span>
+          </a>
+        
+          <a href="/espn-2" style="display: flex; align-items: center; gap: 0.75rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.65rem 0.85rem; text-decoration: none; color: #1e293b; transition: all 0.2s ease;">
+            <img src="../img/canales/espn_2.webp" alt="ESPN 2" width="28" height="28" style="object-fit: contain; border-radius: 4px;" loading="lazy">
+            <span style="font-weight: 700; font-size: 0.875rem;">ESPN 2</span>
+          </a>
+        
+          <a href="/espn-3" style="display: flex; align-items: center; gap: 0.75rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.65rem 0.85rem; text-decoration: none; color: #1e293b; transition: all 0.2s ease;">
+            <img src="../img/canales/espn_3.webp" alt="ESPN 3" width="28" height="28" style="object-fit: contain; border-radius: 4px;" loading="lazy">
+            <span style="font-weight: 700; font-size: 0.875rem;">ESPN 3</span>
+          </a>
+        
+          <a href="/espn-4" style="display: flex; align-items: center; gap: 0.75rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.65rem 0.85rem; text-decoration: none; color: #1e293b; transition: all 0.2s ease;">
+            <img src="../img/canales/espn.webp" alt="ESPN 4" width="28" height="28" style="object-fit: contain; border-radius: 4px;" loading="lazy">
+            <span style="font-weight: 700; font-size: 0.875rem;">ESPN 4</span>
+          </a>
+        
+          <a href="/espn-premium" style="display: flex; align-items: center; gap: 0.75rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.65rem 0.85rem; text-decoration: none; color: #1e293b; transition: all 0.2s ease;">
+            <img src="../img/canales/espn_premium.webp" alt="ESPN Premium" width="28" height="28" style="object-fit: contain; border-radius: 4px;" loading="lazy">
+            <span style="font-weight: 700; font-size: 0.875rem;">ESPN Premium</span>
+          </a>
+        
+          <a href="/directv-sports" style="display: flex; align-items: center; gap: 0.75rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.65rem 0.85rem; text-decoration: none; color: #1e293b; transition: all 0.2s ease;">
+            <img src="../img/canales/dsports.webp" alt="DSports (DIRECTV)" width="28" height="28" style="object-fit: contain; border-radius: 4px;" loading="lazy">
+            <span style="font-weight: 700; font-size: 0.875rem;">DSports (DIRECTV)</span>
+          </a>
+        
+          <a href="/directv-sports-plus" style="display: flex; align-items: center; gap: 0.75rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.65rem 0.85rem; text-decoration: none; color: #1e293b; transition: all 0.2s ease;">
+            <img src="../img/canales/dsports_plus.webp" alt="DSports+" width="28" height="28" style="object-fit: contain; border-radius: 4px;" loading="lazy">
+            <span style="font-weight: 700; font-size: 0.875rem;">DSports+</span>
+          </a>
+        
+          <a href="/tyc-sports" style="display: flex; align-items: center; gap: 0.75rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.65rem 0.85rem; text-decoration: none; color: #1e293b; transition: all 0.2s ease;">
+            <img src="../img/canales/tyc_sports.webp" alt="TyC Sports" width="28" height="28" style="object-fit: contain; border-radius: 4px;" loading="lazy">
+            <span style="font-weight: 700; font-size: 0.875rem;">TyC Sports</span>
+          </a>
+        
+      </div>
+      <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid #f1f5f9; display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.85rem;">
+        <a href="/partidos-de-hoy" style="color: #0f172a; font-weight: 700; text-decoration: none;">⚽ Partidos de Hoy</a>
+        <span style="color: #cbd5e1;">•</span>
+        <a href="/marcadores" style="color: #0f172a; font-weight: 700; text-decoration: none;">📊 Marcadores en Vivo</a>
+        <span style="color: #cbd5e1;">•</span>
+        <a href="/futbol-en-la-tv" style="color: #0f172a; font-weight: 700; text-decoration: none;">📺 Fútbol en la TV</a>
+        <span style="color: #cbd5e1;">•</span>
+        <a href="/partidos-de-hoy" style="color: #0f172a; font-weight: 700; text-decoration: none;">🗓 Agenda Deportiva</a>
+      </div>
+    </section>
+    
+  </main>
+
+  <!-- Clean Slim Footer -->
+  <footer class="footer-clean" style="background: #111827; color: #9ca3af; padding: 2rem 1.5rem; text-align: center; font-size: 0.85rem; margin-top: auto;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="margin-bottom: 0.5rem;">
+        <a href="/" style="color: #cbd5e1; text-decoration: none; margin: 0 0.5rem;">Inicio</a> |
+        <a href="/partidos-de-hoy" style="color: #cbd5e1; text-decoration: none; margin: 0 0.5rem;">Partidos de Hoy</a> |
+        <a href="/marcadores" style="color: #cbd5e1; text-decoration: none; margin: 0 0.5rem;">Marcadores</a> |
+        <a href="/futbol-en-la-tv" style="color: #cbd5e1; text-decoration: none; margin: 0 0.5rem;">Fútbol en TV</a> |
+        <a href="/legal/aviso-legal" style="color: #cbd5e1; text-decoration: none; margin: 0 0.5rem;">Aviso Legal / DMCA</a> | <a href="/legal/contacto" style="color: inherit; text-decoration: none; margin: 0 0.5rem;">Contacto</a>
+      </p>
+      <span style="font-size: 0.8rem; color: #6b7280;">LibreGol TV 2026 — Agenda deportiva y programación de fútbol en vivo.</span>
+    </div>
+  </footer>
+
+  <script>
+    const CHANNEL_NAME = "DSports 2";
+    const PRIMARY_SOURCE = "DSports 2 HD";
+    let activeSourceName = "Fuente 1 " + PRIMARY_SOURCE;
+    let isConnectingStream = false;
+
+    function showConnectingState(durationMs, nextName) {
+      if (isConnectingStream) return;
+      isConnectingStream = true;
+
+      const screenConn = document.getElementById("screenConnecting");
+      const screenPlay = document.getElementById("screenPlaying");
+      const statusText = document.getElementById("streamStatusText");
+      const reloadBtn = document.getElementById("btnStreamReload");
+
+      if (screenConn) screenConn.style.display = "flex";
+      if (screenPlay) screenPlay.style.display = "none";
+      if (reloadBtn) reloadBtn.classList.add("spinning");
+
+      setTimeout(() => {
+        if (nextName) {
+          activeSourceName = nextName;
+        }
+        if (statusText) {
+          statusText.textContent = activeSourceName + " · conectado";
+        }
+        if (screenConn) screenConn.style.display = "none";
+        if (screenPlay) screenPlay.style.display = "flex";
+        if (reloadBtn) reloadBtn.classList.remove("spinning");
+        isConnectingStream = false;
+      }, durationMs);
+    }
+
+    function triggerReload() {
+      showConnectingState(2300, activeSourceName);
+    }
+
+    function selectSource(sourceId, sourceName) {
+      document.querySelectorAll(".source-pill-btn").forEach(btn => {
+        btn.classList.remove("active");
+        if (btn.dataset.sourceId === sourceId) {
+          btn.classList.add("active");
+        }
+      });
+      showConnectingState(2000, sourceName);
+    }
+
+    function handleStreamClick() {
+      if (!isConnectingStream) {
+        showConnectingState(1800, activeSourceName);
+      }
+    }
+
+    function togglePlayPause() {
+      handleStreamClick();
+    }
+
+    function toggleMute() {
+      const btn = document.getElementById("btnVolume");
+      if (btn) {
+        btn.classList.toggle("muted");
+      }
+    }
+
+    function toggleFullscreen() {
+      const frame = document.getElementById("streamPlayerWrapper");
+      if (!document.fullscreenElement) {
+        if (frame.requestFullscreen) frame.requestFullscreen();
+        else if (frame.webkitRequestFullscreen) frame.webkitRequestFullscreen();
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen();
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // Start with Conectando... for 2.2s then enter player with buffer
+      showConnectingState(2200, activeSourceName);
+    });
+  </script>
+  <script src="../js/cookie-consent.js" defer></script>
+</body>
+</html>

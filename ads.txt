@@ -1,0 +1,12 @@
+# LibreGol TV (libregoltv.online) — Official ads.txt
+# Standard Authorized Digital Sellers definition (IAB Tech Lab compliant)
+# ======================================================================
+# INSTRUCCIONES: Reemplaza "pub-XXXXXXXXXXXXXXXX" con tu Publisher ID de Google AdSense
+# una vez que tu cuenta sea aprobada por Google.
+
+# --- Google AdSense & Google Ad Manager ---
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+# --- High-Yield Sports Ad Networks (Opcional / Fallback) ---
+# Si utilizas redes complementarias como Monetag, Adsterra o PropellerAds,
+# agrega aquí sus líneas autorizadas proporcionadas por tu gestor de cuenta.

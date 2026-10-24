@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcadores de Fútbol en Vivo | Mis Marcadores, Resultados y Promiedos</title>
+  <meta name="description" content="Sigue marcadores de fútbol en vivo y resultados en tiempo real estilo Mis Marcadores y Promiedos. Marcador online minuto a minuto de ligas de todo el mundo.">
+  <meta name="keywords" content="mis marcadores, marcadores, promiedos, resultados de futbol hoy, marcador, marcador online, marcadores online, resultados en vivo, marcadores en vivo, minuto a minuto futbol">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://libregoltv.online/marcadores">
+      <!-- Performance & Preconnect Hints -->
+  <link rel="preconnect" href="https://a.espncdn.com" crossorigin>
+  <link rel="dns-prefetch" href="https://a.espncdn.com">
+    <!-- Favicon Suite (Google Search & Multi-Device Optimized) -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/main.min.css?v=5.0">
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Con qué frecuencia se actualizan los marcadores en vivo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los mis marcadores en vivo se actualizan automáticamente cada pocos segundos mediante conexiones asíncronas. No requieres presionar F5 ni refrescar la pantalla: cuando ocurre un gol, el marcador y el indicador del minuto se modifican al instante en tu pantalla."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo consultar los resultados de los partidos disputados ayer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. En la parte superior de la tabla puedes activar el filtro de partidos concluidos para revisar los resultados del futbol ayer, ver los marcadores finales de toda la fecha y chequear el impacto en la tabla de posiciones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se incluyen las definiciones por tanda de penales y prórrogas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutamente. En eliminatorias de Champions League, Copa Libertadores o copas nacionales, el marcador refleja el resultado global, el tiempo extra reglamentario y el tanteador de la tanda de penales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde consultar la tabla de posiciones tras conocer el resultado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puedes ingresar directamente a nuestra sección de Tablas y Posiciones para ver cómo queda la clasificación de LaLiga, Premier League, Liga Profesional Argentina o Liga MX con los puntos sumados en cada jornada."
+      }
+    }
+  ]
+}
+  </script>
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://libregoltv.online/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Marcadores en Vivo",
+      "item": "https://libregoltv.online/marcadores.html"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <!-- Top Announcement Bar -->
+  <div class="top-notice">
+    ⚽ <strong>LibreGol TV:</strong> Tu portal de horarios, agenda de fútbol en vivo y transmisiones oficiales.
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="header-main">
+    <div class="nav-wrapper">
+      <a href="/" class="logo" aria-label="LibreGol TV - Inicio">
+        <span class="logo-ball" style="font-size: 1.35rem; line-height: 1; vertical-align: middle; margin-right: 4px;">⚽</span>
+        <span>LibreGol<span class="logo-accent">TV</span></span>
+      </a>
+
+      <!-- Desktop Channels Navigation -->
+      <nav class="navbar" aria-label="Navegación principal">
+        <a href="/partidos-de-hoy">Partidos de Hoy</a>
+        <a href="/marcadores" class="active" style="color: #16a34a; font-weight: 700;">Marcadores</a>
+        <a href="/resultados-recientes" style="color: #16a34a; font-weight: 700;">Resultados Anteriores</a> • <a href="/futbol-en-la-tv">Fútbol en TV</a>
+        <a href="/posiciones">Posiciones</a>
+        <a href="/partidos-para-manana">Mañana</a>
+        <a href="/canales/index">Canales</a>
+        <a href="/articulos/alternativas-a-futbol-libre">Alternativas</a>
+      </nav>
+
+      <!-- Timezone & Actions -->
+      <div class="header-actions">
+        <div class="timezone-picker" id="countryClockBadge" title="Horarios ajustados automáticamente a tu país y hora local" style="cursor: default; user-select: none;">
+          <span>🕒</span>
+          <span id="userLiveClockText">Detectando hora local...</span>
+        </div>
+
+        <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Abrir Menú">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobileNav" class="mobile-nav-drawer" style="display: none;">
+      <a href="/partidos-de-hoy">⚽ Partidos de Hoy</a>
+      <a href="/marcadores">📊 Marcadores en Vivo</a>
+      <a href="/resultados-recientes" style="color: #16a34a; font-weight: 700;">Resultados Anteriores</a> • <a href="/futbol-en-la-tv">📺 Fútbol en la TV</a>
+      <a href="/posiciones">🏆 Tablas y Posiciones</a>
+      <a href="/partidos-para-manana">📅 Partidos para Mañana</a>
+      <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 0.5rem 0;">
+      <span style="font-size: 0.75rem; text-transform: uppercase; color: #9ca3af; font-weight: 700; padding: 0.25rem 1rem;">Países</span>
+      <a href="/partidos-argentina">🇦🇷 Argentina</a>
+      <a href="/partidos-colombia">🇨🇴 Colombia</a>
+      <a href="/partidos-chile">🇨🇱 Chile</a>
+      <a href="/partidos-mexico">🇲🇽 México</a>
+      <a href="/partidos-peru">🇵🇪 Perú</a>
+      <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 0.5rem 0;">
+      <a href="/articulos/roja-directa-tarjeta-roja">Guía Roja Directa</a>
+      <a href="/articulos/alternativas-a-futbol-libre">Alternativas a Fútbol Libre</a>
+      <a href="/legal/nosotros">Sobre Nosotros</a>
+    </div>
+  </header>
+  <main class="main-competitor">
+    <h1 class="page-title">Marcadores de Fútbol en Vivo - Resultados Online, Minuto a Minuto y Promiedos</h1>
+    <p class="description">
+      Consulta los marcadores en vivo y resultados de fútbol hoy en <a href="/">LibreGol TV</a>. Tu alternativa a Mis Marcadores y Promiedos con marcadores en directo, goles al instante y estado minuto a minuto de las principales ligas y torneos internacionales.
+    </p>
+        <!-- Marcadores Status Tabs -->
+    <div class="marcadores-status-tabs" role="tablist" aria-label="Filtro de estado de partidos">
+      <button type="button" class="status-tab-btn active" data-status="all">
+        <span>📊 Todos</span>
+        <span class="status-tab-badge" id="countAll">0</span>
+      </button>
+      <button type="button" class="status-tab-btn" data-status="LIVE">
+        <span class="pulse-live-indicator"></span>
+        <span>🔴 En Directo</span>
+        <span class="status-tab-badge" id="countLive">0</span>
+      </button>
+      <button type="button" class="status-tab-btn" data-status="FINISHED">
+        <span>✅ Finalizados</span>
+        <span class="status-tab-badge" id="countFinished">0</span>
+      </button>
+      <button type="button" class="status-tab-btn" data-status="UPCOMING">
+        <span>📅 Próximos</span>
+        <span class="status-tab-badge" id="countUpcoming">0</span>
+      </button>
+    </div>
+
+    <!-- Quick League Filter Pills -->
+    <div class="agenda-filter-pills" role="toolbar" aria-label="Filtro por liga y torneo">
+      <button type="button" class="filter-pill-btn active" data-category="all">Todas las Ligas</button>
+      <button type="button" class="filter-pill-btn" data-category="europa">🏆 Champions / Europa</button>
+      <button type="button" class="filter-pill-btn" data-category="conmebol">🏆 Libertadores / Sudamericana</button>
+      <button type="button" class="filter-pill-btn" data-category="argentina">🇦🇷 Argentina</button>
+      <button type="button" class="filter-pill-btn" data-category="espana">🇪🇸 España</button>
+      <button type="button" class="filter-pill-btn" data-category="mexico">🇲🇽 México</button>
+      <button type="button" class="filter-pill-btn" data-category="colombia">🇨🇴 Colombia</button>
+      <button type="button" class="filter-pill-btn" data-category="chile">🇨🇱 Chile</button>
+      <button type="button" class="filter-pill-btn" data-category="peru">🇵🇪 Perú</button>
+    </div>
+
+    <!-- Search Controls with Match Counter -->
+    <div class="agenda-controls-bar">
+      <div class="search-wrapper">
+        <input type="text" id="searchInput" class="search-input-field" placeholder="🔍 Buscar equipo o torneo en marcadores (ej. Real Madrid, Boca, Champions)..." aria-label="Buscar marcadores">
+        <button type="button" id="searchClearBtn" class="search-clear-btn" aria-label="Limpiar búsqueda">✕</button>
+      </div>
+      <span class="match-counter-badge" id="matchCounter">Mostrando partidos...</span>
+    </div>
+
+    <section class="agenda-section" id="agenda" aria-label="Marcadores en Directo">
+      <div id="wraper">
+        <div class="agenda-header">
+          <h2>Marcador Online Minuto a Minuto</h2>
+        </div>
+        <ul id="menu"></ul>
+      </div>
+    </section>
+
+        <article class="editorial-article">
+      <h2>Marcadores de Fútbol en Vivo: Resultados Online, Minuto a Minuto y Estilo Promiedos</h2>
+      <p>
+        El seguimiento deportivo moderno exige precisión absoluta al segundo. En LibreGol TV hemos diseñado un motor interactivo de marcadores en vivo y resultados en vivo concebido para quienes buscan la inmediatez de plataformas históricas como Mis Marcadores (Flashscore) y la popularidad de Promiedos, pero con una navegación limpia, libre de saturación publicitaria y optimizada para dispositivos móviles.
+      </p>
+      <p>
+        Ya sea que necesites consultar los resultados de futbol hoy, revisar los resultados del futbol ayer de la fecha recién concluida o seguir el marcador online en tiempo real con goles, tarjetas y tiempos suplementarios, nuestro sistema de marcadores online se actualiza de manera automática sin necesidad de recargar tu navegador.
+      </p>
+
+      <h3>La Evolución de los Marcadores Online: De Mis Marcadores a Promiedos</h3>
+      <p>
+        Durante más de dos décadas, los aficionados al balompié han confiado en marcas emblemáticas para conocer el tanteador de sus equipos. Plataformas como <em>Mis Marcadores</em> revolucionaron la industria al ofrecer alertas instantáneas de goles y estadísticas en vivo para cientos de ligas simultáneas. En el Río de la Plata y Sudamérica, <em>Promiedos</em> se convirtió en el punto de encuentro por excelencia para los hinchas que siguen las tablas de promedios del descenso, el fixture de la Liga Profesional y los torneos del ascenso.
+      </p>
+      <p>
+        En LibreGol TV combinamos lo mejor de ambos mundos: la rapidez de un marcador en directo futbol global y la cercanía de la información futbolística latinoamericana. Nuestro centro de resultados en vivo futbol categoriza los encuentros mediante filtros inteligentes para que pases en un toque de la Copa Libertadores a LaLiga española, la Premier League o la Liga BetPlay.
+      </p>
+
+      <h3>Minuto a Minuto y Resultados en Tiempo Real</h3>
+      <p>
+        El seguimiento de minuto a minuto futbol te permite estar al tanto de cada incidencia en el campo de juego:
+      </p>
+      <ul>
+        <li><strong>Alertas de Goles y Marcador Parcial:</strong> Actualización instantánea del tanteador ante cada anotación en cualquier parte del mundo.</li>
+        <li><strong>Filtros por Estado del Partido:</strong> Alterna fácilmente entre encuentros <em>🔴 En Vivo</em> (disputándose en este instante), <em>✅ Finalizados</em> (con resultados oficiales) o <em>⏳ Próximos</em> (con hora local confirmada).</li>
+        <li><strong>Seguimiento de Quiniela y Apuestas Deportivas:</strong> Para los entusiastas de las quinielas y pronósticos, seguir los resultados de la quiniela en directo y los resultados en tiempo real de cada fecha resulta indispensable para verificar combinaciones y boletos antes del pitazo final.</li>
+      </ul>
+
+      <div class="editorial-callout">
+        <div class="editorial-callout-title">
+          <span>⚡</span> ¿Cómo Logramos Resultados al Instante?
+        </div>
+        <p>
+          Nuestro motor dinámico sincroniza directamente con las fuentes de datos oficiales de las ligas, ofreciéndote un marcador exacto con tiempos de reposición, revisiones del VAR y definiciones por penales. Si estás siguiendo varios partidos simultáneos, los marcadores de futbol hoy se refrescan en segundo plano con un consumo mínimo de datos móviles y batería.
+        </p>
+      </div>
+
+      <h2>Preguntas Frecuentes sobre Marcadores y Resultados en Directo</h2>
+      <div class="faq-accordion-group">
+        <details class="faq-accordion-item" open>
+          <summary class="faq-accordion-question">¿Con qué frecuencia se actualizan los marcadores en vivo?</summary>
+          <div class="faq-answer">
+            <p>
+              Los mis marcadores en vivo se actualizan automáticamente cada pocos segundos mediante conexiones asíncronas. No requieres presionar F5 ni refrescar la pantalla: cuando ocurre un gol, el marcador y el indicador del minuto se modifican al instante en tu pantalla.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-accordion-item">
+          <summary class="faq-accordion-question">¿Puedo consultar los resultados de los partidos disputados ayer?</summary>
+          <div class="faq-answer">
+            <p>
+              Sí. En la parte superior de la tabla puedes activar el filtro de partidos concluidos para revisar los resultados del futbol ayer, ver los marcadores finales de toda la fecha y chequear el impacto en la tabla de posiciones.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-accordion-item">
+          <summary class="faq-accordion-question">¿Se incluyen las definiciones por tanda de penales y prórrogas?</summary>
+          <div class="faq-answer">
+            <p>
+              Absolutamente. En eliminatorias de Champions League, Copa Libertadores o copas nacionales, el marcador refleja el resultado global, el tiempo extra reglamentario y el tanteador de la tanda de penales.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-accordion-item">
+          <summary class="faq-accordion-question">¿Dónde consultar la tabla de posiciones tras conocer el resultado?</summary>
+          <div class="faq-answer">
+            <p>
+              Puedes ingresar directamente a nuestra sección de <a href="/posiciones">Tablas y Posiciones</a> para ver cómo queda la clasificación de LaLiga, Premier League, Liga Profesional Argentina o Liga MX con los puntos sumados en cada jornada.
+            </p>
+          </div>
+        </details>
+      </div>
+    </article>
+    
+  </main>
+  <!-- Footer -->
+  <footer class="footer-main" style="background: #111827; color: #9ca3af; padding: 2.5rem 1.5rem; margin-top: 3rem; font-size: 0.875rem;">
+    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;">
+      <div>
+        <h4 style="color: white; font-size: 1.1rem; margin-bottom: 0.75rem;">LibreGol TV</h4>
+        <p>Tu portal de información deportiva, horarios y guía oficial de partidos de fútbol en directo.</p>
+      </div>
+      <div>
+        <h4 style="color: white; font-size: 1.1rem; margin-bottom: 0.75rem;">Secciones</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+          <li><a href="/partidos-de-hoy" style="color: #cbd5e1; text-decoration: none;">Partidos de Hoy</a></li>
+          <li><a href="/marcadores" style="color: #cbd5e1; text-decoration: none;">Marcadores en Vivo</a></li>
+          <li><a href="/resultados-recientes" style="color: #16a34a; font-weight: 700;">Resultados Anteriores</a> • <a href="/futbol-en-la-tv" style="color: #cbd5e1; text-decoration: none;">Fútbol en la TV</a></li>
+          <li><a href="/posiciones" style="color: #cbd5e1; text-decoration: none;">Tablas y Posiciones</a></li>
+          <li><a href="/partidos-para-manana" style="color: #cbd5e1; text-decoration: none;">Partidos para Mañana</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color: white; font-size: 1.1rem; margin-bottom: 0.75rem;">Canales Populares</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+          <li><a href="/canales/espn-1" style="color: #cbd5e1; text-decoration: none;">ESPN en vivo</a></li>
+          <li><a href="/canales/fox-sports-1" style="color: #cbd5e1; text-decoration: none;">Fox Sports</a></li>
+          <li><a href="/canales/tnt-sports" style="color: #cbd5e1; text-decoration: none;">TNT Sports</a></li>
+          <li><a href="/canales/win-sports" style="color: #cbd5e1; text-decoration: none;">Win Sports+</a></li>
+          <li><a href="/canales/tudn" style="color: #cbd5e1; text-decoration: none;">TUDN en vivo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color: white; font-size: 1.1rem; margin-bottom: 0.75rem;">Legal y Transparencia</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+          <li><a href="/legal/politica-de-privacidad" style="color: #cbd5e1; text-decoration: none;">Política de Privacidad</a></li>
+          <li><a href="/legal/terminos-y-condiciones" style="color: #cbd5e1; text-decoration: none;">Términos y Condiciones</a></li>
+          <li><a href="/legal/aviso-legal" style="color: #cbd5e1; text-decoration: none;">Aviso Legal / DMCA</a> | <a href="/legal/contacto" style="color: inherit; text-decoration: none; margin: 0 0.5rem;">Contacto</a></li>
+          <li><a href="/legal/nosotros" style="color: #cbd5e1; text-decoration: none;">Quiénes Somos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="max-width: 1100px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid #1f2937; text-align: center; font-size: 0.8rem; color: #6b7280;">
+      © 2026 LibreGol TV — Todos los derechos reservados. Portal meramente informativo y de guía deportiva.
+    </div>
+  </footer>
+
+  <script src="js/agenda-data.js?v=6.0"></script>
+  <script>window.IS_MARCADORES_VIEW = true;</script>
+  <script src="js/app.js?v=6.0"></script>
+  <script>
+    function toggleMobileMenu() {
+      const drawer = document.getElementById("mobileNav");
+      if (drawer) {
+        drawer.style.display = drawer.style.display === "none" ? "block" : "none";
+      }
+    }
+  </script>
+  <script src="js/cookie-consent.js" defer></script>
+</body>
+</html>

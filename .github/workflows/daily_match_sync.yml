@@ -1,0 +1,65 @@
+name: LibreGol TV — Automated Match Sync Pipeline
+
+on:
+  schedule:
+    # Run every 2 hours to keep fixtures, kickoffs, and scores updated
+    - cron: '0 */2 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+      - '.github/**'
+
+permissions:
+  contents: write
+  deployments: write
+
+jobs:
+  sync-matches:
+    runs-on: ubuntu-latest
+    name: Sync Live Matches & Deploy
+
+    steps:
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pillow
+
+      - name: Execute Resilient Auto-Sync Pipeline
+        run: |
+          python auto_sync_pipeline.py
+
+      - name: Commit and Push Updated Matches & Sitemap
+        run: |
+          git config --global user.name "LibreGol TV Sync Bot"
+          git config --global user.email "bot@libregoltv.online"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No match changes detected in this cycle."
+          else
+            git commit -m "chore(auto-sync): update live match agenda, SEO pages and sitemap [skip ci]"
+            git push origin main
+          fi
+
+      - name: Deploy to Cloudflare Pages
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        uses: cloudflare/wrangler-action@v3
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy . --project-name=libregoltv
