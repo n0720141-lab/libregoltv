@@ -918,28 +918,28 @@ window.LIBREGOL_CHANNELS = [
     logo: "img/canales/dsports_2.webp"
   },
   {
-    slug: "tyc-sports",
+    slug: "tyc-sports-argentina",
     name: "TyC Sports",
     country: "Argentina 🇦🇷",
     description: "Líder en fútbol argentino, Copa Argentina y Eliminatorias en vivo.",
     logo: "img/canales/tyc_sports.webp"
   },
   {
-    slug: "espn-1",
+    slug: "espn-deportes",
     name: "ESPN 1",
     country: "Sudamérica / Global 🌎",
     description: "UEFA Champions League, Premier League, LaLiga y torneos internacionales.",
     logo: "img/canales/espn.webp"
   },
   {
-    slug: "espn-premium",
+    slug: "espn-premium-argentina",
     name: "ESPN Premium",
     country: "Argentina 🇦🇷",
     description: "Transmisión oficial del Pack Fútbol de la Liga Profesional Argentina.",
     logo: "img/canales/espn_premium.webp"
   },
   {
-    slug: "tnt-sports",
+    slug: "tnt-sports-hd",
     name: "TNT Sports",
     country: "Argentina 🇦🇷",
     description: "Fútbol argentino en vivo, análisis de cada fecha y clásicos.",
@@ -960,7 +960,7 @@ window.LIBREGOL_CHANNELS = [
     logo: "img/canales/win_sports.webp"
   },
   {
-    slug: "directv-sports-plus",
+    slug: "dsports-plus",
     name: "DSports Plus",
     country: "Sudamérica 🌎",
     description: "Señal adicional con fútbol, eventos especiales y deportes en vivo.",
@@ -1060,31 +1060,31 @@ def update_sitemap(matches):
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://libregoltv.online/canales/directv-sports-plus.html</loc>
+    <loc>https://libregoltv.online/canales/dsports-plus.html</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://libregoltv.online/canales/tyc-sports.html</loc>
+    <loc>https://libregoltv.online/canales/tyc-sports-argentina.html</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://libregoltv.online/canales/espn-1.html</loc>
+    <loc>https://libregoltv.online/canales/espn-deportes.html</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://libregoltv.online/canales/espn-premium.html</loc>
+    <loc>https://libregoltv.online/canales/espn-premium-argentina.html</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://libregoltv.online/canales/tnt-sports.html</loc>
+    <loc>https://libregoltv.online/canales/tnt-sports-hd.html</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
