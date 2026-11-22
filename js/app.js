@@ -553,8 +553,8 @@ document.addEventListener("DOMContentLoaded", () => {
               Los canales deportivos siguen transmitiendo en vivo las 24 horas del día.
             </p>
             <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
-              <a href="/canales/espn-1" style="background: #16a34a; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Ver ESPN en Vivo</a>
-              <a href="/canales/tyc-sports" style="background: #0284c7; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Ver TyC Sports</a>
+              <a href="/canales/espn-deportes" style="background: #16a34a; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Ver ESPN en Vivo</a>
+              <a href="/canales/tyc-sports-argentina" style="background: #0284c7; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Ver TyC Sports</a>
               <a href="/canales/directv-sports" style="background: #1e293b; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 0.85rem;">Ver DSports</a>
             </div>
           </li>
